@@ -26,7 +26,6 @@ figures_pos = [[(0, -1), (0, -2), (0, 0), (0, 1)],  # Flipped positions
                [(0, 0), (-1, 0), (1, 0), (0, -1)]]
 
 figures = [[pygame.Rect(x + W // 2, y + H - 2, 1, 1) for x, y in fig_pos] for fig_pos in figures_pos]
-print(figures)
 figure_rect = pygame.Rect(0, 0, TILE - 2, TILE - 2)
 field = [[0 for i in range(W)] for j in range(H)]
 
