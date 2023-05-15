@@ -9,7 +9,8 @@ RES = 600, 500
 FPS = 60
 
 pygame.init()
-
+pygame.mixer.music.load('music/music_game.mp3')
+pygame.mixer.music.play(-1)
 sc = pygame.display.set_mode(RES)
 game_sc = pygame.Surface(GAME_RES)
 clock = pygame.time.Clock()
@@ -17,11 +18,11 @@ clock = pygame.time.Clock()
 grid = [pygame.Rect(y * TILE, x * TILE, TILE, TILE) for x in range(H) for y in range(W)]
 
 figures_pos = [[(0, -1), (0, -2), (0, 0), (0, 1)],  # Flipped positions
-               [(1, 0), (1, -1), (0, -1), (0, 0)],  # Flipped positions
-               [(0, -1), (-1, -1), (0, 0), (-1, 0)],  # Flipped positions
-               [(0, 0), (0, -1), (1, 0), (-1, -1)],  # Flipped positions
-               [(0, 0), (-1, 0), (1, 0), (-1, 1)],  # Flipped positions
-               [(0, 0), (-1, 0), (1, 0), (-1, -1)],  # Flipped positions
+               [(1, 0), (1, -1), (0, -1), (0, 0)],
+               [(0, -1), (-1, -1), (0, 0), (-1, 0)],
+               [(0, 0), (0, -1), (1, 0), (-1, -1)],
+               [(0, 0), (-1, 0), (1, 0), (-1, 1)],
+               [(0, 0), (-1, 0), (1, 0), (-1, -1)],
                [(0, 0), (-1, 0), (1, 0), (0, -1)]]
 
 figures = [[pygame.Rect(x + W // 2, y + H - 2, 1, 1) for x, y in fig_pos] for fig_pos in figures_pos]
@@ -92,9 +93,9 @@ while True:
                 dx = -1
             elif event.key == pygame.K_RIGHT:
                 dx = 1
-            elif event.key == pygame.K_DOWN:
-                anim_limit = 100
             elif event.key == pygame.K_UP:
+                anim_limit = 100
+            elif event.key == pygame.K_DOWN:
                 rotate = True
     # move x
     figure_old = deepcopy(figure)
