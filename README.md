@@ -15,25 +15,30 @@
 
 Create python (Python 3.11.3) venv.
 
-bash
-python -m venv venv
+```bash
+python3 -m venv venv
+```
 Activate python venv.
 
-bash
+```bash
 source venv/bin/activate
+```
 or 
-bash
+```bash
 .\venv\activate
+```
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements file.
 
-bash
+```bash
 pip3 install -r requirements.txt
+```
 
 ## Usage
 
-bash
+```bash
 # run python project 
 python main.py
+```
 
 ## Final
 ![tetris](screenshot/interface.jpg "Tetris")
