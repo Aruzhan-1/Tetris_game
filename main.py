@@ -88,12 +88,12 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exit()
-        if event.type == pygame.KEYDOWN:
+        if event.type == pygame.KEYDOWN :
             if event.key == pygame.K_LEFT:
                 dx = -1
             elif event.key == pygame.K_RIGHT:
                 dx = 1
-            elif event.key == pygame.K_UP:
+            elif event.key == pygame.K_UP :
                 anim_limit = 100
             elif event.key == pygame.K_DOWN:
                 rotate = True
