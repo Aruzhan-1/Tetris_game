@@ -13,7 +13,7 @@
 
 ## Installation
 
-Create python venv.
+Create python (Python 3.11.3) venv.
 
 bash
 python -m venv venv
